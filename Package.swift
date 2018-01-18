@@ -3,5 +3,9 @@ import PackageDescription
 
 let package = Package(
     name: "Cgd",
-    pkgConfig: "gdlib"
+    pkgConfig: "gdlib",
+    providers: [
+        .brew(["gd"]),
+        .apt(["libgd-dev"])
+    ]
 )
